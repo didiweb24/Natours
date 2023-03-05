@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/didiweb24/Natours/issues"
   },
-  "homepage": "https://github.com/didiweb24/Natours#readme"
+  "homepage": "https://github.com/didiweb24/Natours#readme",
+  "devDependencies": {
+    "node-sass": "^8.0.0"
+  }
 }
