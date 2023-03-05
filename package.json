@@ -1,0 +1,19 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "Landing page for Natours",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/didiweb24/Natours.git"
+  },
+  "author": "Dilan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/didiweb24/Natours/issues"
+  },
+  "homepage": "https://github.com/didiweb24/Natours#readme"
+}
