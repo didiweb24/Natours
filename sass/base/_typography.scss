@@ -4,7 +4,7 @@ body {
     font-size: $default-font-size;
     line-height: 1.7;
     color: $color-grey-dark;
-    padding: 3rem;
+  
 }
 
 
@@ -20,7 +20,11 @@ body {
     font-size: 6rem;
     font-weight: 400;
     letter-spacing: 3.5rem;
-
+    
+    @include respond(phone) {
+       letter-spacing: 1rem;
+       font-size: 5rem;
+    }
 
    animation: moveInLeft 1s ease-out;
 
@@ -34,7 +38,10 @@ body {
     font-weight: 700;
     letter-spacing:1.75rem;
 
-
+    @include respond(phone) {
+      letter-spacing: .5rem;
+    
+   }
    animation: moveInRight 1s ease-out;
   
 } 
@@ -50,6 +57,14 @@ body {
     color: transparent;
     letter-spacing: .2rem;
     transition: all .2s;
+
+    @include respond(tab-port) {
+      font-size: 3rem;
+    }
+
+    @include respond(phone) {
+      font-size: 2.5rem;
+    }
 
 
     &:hover {
