@@ -1,3 +1,23 @@
+/*
+
+0 - 600PX :   Phone
+600 - 900PX : Tablet portrait
+900 - 1200PX: Tablet landscape
+
+
+1200 -  1800 is where our normal styles apply
+1800  + :      Big desktop
+
+*/
+/* 
+$breakpoint arguement choices:
+
+-phone
+-tab-port
+-tab-land
+-big-desktop
+
+*/
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -35,6 +55,18 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 600px) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 900px) {
+    html {
+      font-size: 60%; } }
+  @media (max-width: 1200px) {
+    html {
+      font-size: 70%; } }
+  @media (min-width: 600px) {
+    html {
+      font-size: 80%; } }
 
 body {
   box-sizing: border-box; }
@@ -419,26 +451,30 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: all .3s; }
+  @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+    .popup {
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      background-color: rgba(0, 0, 0, 0.3); } }
   .popup__content {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 75%;
-    position: relative;
     background-color: #fff;
-    box-shadow: 0 2rem 4 rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
     border-radius: 3px;
     display: table;
     overflow: hidden;
     opacity: 0;
-    transform: translate(-50%, -50%) scale(0.5);
-    transition: all .4s .2s; }
+    transform: translate(-50%, -50%) scale(0.25);
+    transition: all .5s .2s; }
   .popup__left {
-    width: 33.3333%;
+    width: 33.333333%;
     display: table-cell; }
   .popup__right {
-    width: 66.6666%;
+    width: 66.6666667%;
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem; }
@@ -472,10 +508,10 @@ body {
     font-size: 3rem;
     text-decoration: none;
     display: inline-block;
-    transition: all .3s;
-    line-height: 1rem; }
-    .popup__close:link:hover, .popup__close:visited:hover {
-      color: #55c57a; }
+    transition: all .2s;
+    line-height: 1; }
+  .popup__close:hover {
+    color: #55c57a; }
 
 .story {
   width: 75%;
