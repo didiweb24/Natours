@@ -35,12 +35,23 @@
         height: 15rem;
        
         float:left;
-        -webkit-shape-outside: circle(50% at 50% 50%);
-        shape-outside: circle(50% at 50% 50%);
-        -webkit-shape-outside: circle(50% at 50% 50%);
-        clip-path:circle(50% at 50% 50%); 
+        
         transform: translateX(-3rem) skewX(12deg);
         position: relative;
+        overflow: hidden;
+        border-radius: 50%;
+
+
+
+    @supports (clip-path: polygon(0 0)) or (min-width: 37.5rem) {
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        clip-path:circle(50% at 50% 50%); 
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        shape-outside: circle(50% at 50% 50%);
+        border-radius: none;
+        
+    };
+     
 
         @include respond(phone) {
           transform: translateX(-3rem) skewX(0);
